@@ -11,7 +11,6 @@ using VRageMath;
 
 namespace UDSEGPS
 {
-
     // ReSharper disable once UnusedType.Global
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class GPSHelper : MySessionComponentBase
@@ -52,6 +51,7 @@ namespace UDSEGPS
                 cmd = messageText;
                 extra = null;
             }
+
             switch (cmd.ToLowerInvariant())
             {
                 case "/fgps":
@@ -95,12 +95,13 @@ namespace UDSEGPS
             var ans = "";
             var power = baseStr.Length;
 
-            while ((int)number != 0)
+            while ((int) number != 0)
             {
-                var m = (int)(number % power);
+                var m = (int) (number % power);
                 number /= power;
                 ans = baseStr.Substring(m, 1) + ans;
             }
+
             return ans;
         }
 
@@ -110,16 +111,16 @@ namespace UDSEGPS
             ulong power = 1;
             foreach (var c in alpha.ToCharArray().Reverse())
             {
-                var posValue = (ulong)baseStr.IndexOf(c);
+                var posValue = (ulong) baseStr.IndexOf(c);
                 val += posValue * power;
-                power *= (ulong)baseStr.Length;
+                power *= (ulong) baseStr.Length;
             }
+
             return val;
         }
 
         private void ResetGPSCounter(string extra)
         {
-
             var player = MyAPIGateway.Session.Player;
             var playerId = player.IdentityId;
             ulong autoid = 0;
@@ -128,8 +129,8 @@ namespace UDSEGPS
             {
                 autoid = ConvertFromBaseAlpha(extra);
             }
-            MyAPIGateway.Utilities.SetVariable("autoid_" + playerId, autoid);
 
+            MyAPIGateway.Utilities.SetVariable("autoid_" + playerId, autoid);
         }
 
         private void CreateFactionGPS(string extra, bool useGPSX)
@@ -149,15 +150,16 @@ namespace UDSEGPS
         }
 
         private const double radius = 50.0;
+
         private IMyGps CreateGPS(string extra, bool useAutoID = true)
         {
-
             var player = MyAPIGateway.Session.Player;
             var playerPosition = player.Character.GetPosition();
             var playerId = player.IdentityId;
-            
+
             ulong autoid = 0;
-            if (useAutoID) {            
+            if (useAutoID)
+            {
                 MyAPIGateway.Utilities.GetVariable("autoid_" + playerId, out autoid);
                 autoid++;
             }
@@ -182,7 +184,6 @@ namespace UDSEGPS
             MyAPIGateway.Utilities.SetVariable("autoid_" + playerId, autoid);
 
             return gps;
-
         }
 
         private void processGPS(string args, Action<IMyGps> gpsAction)
@@ -197,20 +198,21 @@ namespace UDSEGPS
                     gpsAction(gps);
                     continue;
                 }
-                
+
                 // If we have a matcher, only run on matching entries
-                if (gps.Name.Contains(matcher) || gps.Description.Contains(matcher) || gps.GPSColor.ToString().Contains(matcher))
+                if (gps.Name != null && gps.Name.Contains(matcher) ||
+                    gps.Description != null && gps.Description.Contains(matcher) ||
+                    gps.GPSColor.ToString().Contains(matcher))
+                {
                     gpsAction(gps);
-            }            
+                }
+            }
         }
 
         private void ExportAllGPSToClipboard(string args)
         {
             var sb = new StringBuilder();
-            processGPS(args, gps =>
-            {
-                sb.AppendLine(gps.ToString());
-            });
+            processGPS(args, gps => { sb.AppendLine(gps.ToString()); });
             MyClipboardHelper.SetClipboard(sb.ToString());
             MyAPIGateway.Utilities.ShowNotification("GPS Points have been exported to the clipboard");
         }
@@ -227,10 +229,8 @@ namespace UDSEGPS
 
         private void RemoveGPS(string args)
         {
-            processGPS(args, gps =>
-            {
-                MyAPIGateway.Session.GPS.RemoveGps(MyAPIGateway.Session.Player.IdentityId, gps);
-            });
+            processGPS(args,
+                gps => { MyAPIGateway.Session.GPS.RemoveGps(MyAPIGateway.Session.Player.IdentityId, gps); });
             MyAPIGateway.Utilities.ShowNotification("GPS Points have been removed");
         }
     }
