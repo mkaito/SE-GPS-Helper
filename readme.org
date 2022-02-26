@@ -1,13 +1,13 @@
 * GPS Helper
 
 Based on
-[[GPSHelper][https://steamcommunity.com/sharedfiles/filedetails/?id=2478246718]]
+[[https://steamcommunity.com/sharedfiles/filedetails/?id=2478246718][GPSHelper]]
 by CrazyDave137, seemingly abandoned and non-functional. I picked it up, cleaned
 it a bit, and fixed issues with string filtering. Commands are the same, I just
 fixed some internals and minor performance issuese that nobody would have
 noticed anyway.
 
-Code available on [[GitHub][https://github.com/mkaito/SE-GPS-Helper]].
+Code available on [[https://github.com/mkaito/SE-GPS-Helper][GitHub]].
 
 ** Usage
 
