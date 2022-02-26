@@ -7,6 +7,8 @@ it a bit, and fixed issues with string filtering. Commands are the same, I just
 fixed some internals and minor performance issuese that nobody would have
 noticed anyway.
 
+Code available on [[GitHub][https://github.com/mkaito/SE-GPS-Helper]].
+
 ** Usage
 
 =[string]= denotes an optional parameter. You may provide it, or leave it blank.
