@@ -1,0 +1,17 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005Cnetstandard_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CProtoBuf_002ENet_002ECore_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSandbox_002ECommon_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSandbox_002EGame_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSandbox_002EGraphics_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSpaceEngineers_002EGame_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSpaceEngineers_002EObjectBuilders_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CSystem_002ECollections_002EImmutable_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002EGame_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002EInput_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002ELibrary_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002EMath_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002ERender_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CSpaceEngineers_005CBin64_005CVRage_002ERender11_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AGPSHelper_002Ecs/@EntryIndexedValue">ForceIncluded</s:String></wpf:ResourceDictionary>

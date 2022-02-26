@@ -1,0 +1,3 @@
+[submodule "vendor/2bbcode"]
+	path = vendor/2bbcode
+	url = https://github.com/lilydjwg/2bbcode.git
