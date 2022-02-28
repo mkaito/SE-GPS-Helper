@@ -136,7 +136,6 @@ namespace UDSEGPS
         private void CreateFactionGPS(string extra, bool useGPSX)
         {
             var player = MyAPIGateway.Session.Player;
-            // var playerPosition = player.Character.GetPosition();
             var playerId = player.IdentityId;
 
             var gps = CreateGPS(extra, useGPSX);
@@ -154,7 +153,7 @@ namespace UDSEGPS
         private IMyGps CreateGPS(string extra, bool useAutoID = true)
         {
             var player = MyAPIGateway.Session.Player;
-            var playerPosition = player.Character.GetPosition();
+            var position = MyAPIGateway.Session.ControlledObject.Entity.GetPosition();
             var playerId = player.IdentityId;
 
             ulong autoid = 0;
@@ -165,7 +164,7 @@ namespace UDSEGPS
             }
 
             var voxelMaps = new List<MyVoxelBase>();
-            var sphere = new BoundingSphereD(playerPosition, radius);
+            var sphere = new BoundingSphereD(position, radius);
 
             MyGamePruningStructure.GetAllVoxelMapsInSphere(ref sphere, voxelMaps);
 
@@ -178,8 +177,10 @@ namespace UDSEGPS
             if (useAutoID)
                 locationName += " " + ConvertToBaseAlpha(autoid).PadLeft(3, '0');
 
-            var gps = MyAPIGateway.Session.GPS.Create(locationName, builder.ToString(), playerPosition, true);
+            var gps = MyAPIGateway.Session.GPS.Create(locationName, builder.ToString(), position, true);
             MyAPIGateway.Session.GPS.AddGps(playerId, gps);
+            
+            MyAPIGateway.Utilities.ShowNotification($"Created GPS: {locationName}", 5000);
 
             MyAPIGateway.Utilities.SetVariable("autoid_" + playerId, autoid);
 
